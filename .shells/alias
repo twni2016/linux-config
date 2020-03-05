@@ -1,0 +1,45 @@
+# Cute shell shortcuts
+alias ls='ls --sort=extension --color=auto'
+alias ll='ls -alh'
+alias psg='ps -aux | grep'
+
+# Cool colors for man pages
+alias man="TERMINFO=~/.terminfo TERM=mostlike LESS=C PAGER=less man"
+
+# Enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# Some more, to avoid mistakes
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Git Commands
+# Add and Commit are used as functions
+alias gc='git commit -m'
+alias gpo='git push origin master'
+alias gp='git pull'
+alias gs='git status'
+alias gd='git diff'
+alias grh='git reset --hard origin/master'
+
+# Quickly load bashrc
+alias bashrc='source ~/.bashrc'
+
+# Jupyter Lab
+alias jup='jupyter lab --ip=0.0.0.0'
+
+# nvidia
+alias nv='nvidia-smi'
+alias wnv='watch nvidia-smi'
+
+# tmux clear buffer
+alias cls='clear ; tmux clear-history'

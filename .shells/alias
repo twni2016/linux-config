@@ -43,3 +43,7 @@ alias wnv='watch nvidia-smi'
 
 # tmux clear buffer
 alias cls='clear ; tmux clear-history'
+
+# slurm
+alias sq='squeue -u "$USER" --sort=+i'
+alias skill='scancel -u "$USER"'

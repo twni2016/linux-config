@@ -48,5 +48,6 @@ alias cls='clear ; tmux clear-history'
 alias sq='squeue -u "$USER" --sort=+i'
 alias srungpu='srun --gres=gpu:1 --mem=10G --pty bash'
 alias skill='scancel -u "$USER"'
+alias topme='top -u "$USER"'
 # for redirect
 alias tb='tensorboard --host localhost'

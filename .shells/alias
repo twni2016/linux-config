@@ -44,10 +44,12 @@ alias wnv='watch nvidia-smi'
 # tmux clear buffer
 alias cls='clear ; tmux clear-history'
 
+# top
+alias topme='top -u "$USER"'
+alias htopme='htop -u "$USER"'
+
 # slurm
 alias sq='squeue -u "$USER" --sort=+i'
 alias srungpu='srun --gres=gpu:1 --mem=10G --pty bash'
 alias skill='scancel -u "$USER"'
-alias topme='top -u "$USER"'
-# for redirect
 alias tb='tensorboard --host localhost'

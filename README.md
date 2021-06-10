@@ -8,3 +8,6 @@ sh move.sh
 sh git.sh
 source ~/.bashrc
 ```
+
+## Reference
+https://github.com/rkirti/bashrc

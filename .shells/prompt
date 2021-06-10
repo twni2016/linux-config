@@ -40,20 +40,9 @@ function pre_prompt {
 
 PROMPT_COMMAND=pre_prompt
 
-case "$TERM" in
-xterm)
-    PS1="$bblue┌─($orange\u@\h \$(date \"+%a, %d %b %y\")$bblue)─\${fill}─($orange\$newPWD\
-        $bblue)─┐\n$bblue└─($orange\$(date \"+%H:%M\") $(parse_git_branch) \$$bblue)─>$white "
-    ;;
-screen)
-    PS1="$bblue┌─($orange\u@\h \$(date \"+%a, %d %b %y\")$bblue)─\${fill}─($orange\$newPWD\
-$bblue)─┐\n$bblue└─($orange\$(date \"+%H:%M\") \$$bblue)─>$white "
-    ;;    
-    *)
-    PS1="┌─(\u@\h \$(date \"+%a, %d %b %y\"))─\${fill}─(\$newPWD\
-        )─┐\n└─(\$(date \"+%H:%M\") $(parse_git_branch) \$)─> "
-    ;;
-esac
+# Feel free to change colors
+PS1="$bblue┌─($red\u$white@$green\h $yellow\$(date \"+%a, %d %b %y\")$bblue)─\${fill}─($smoothgreen\$newPWD\
+    $bblue)─┐\n$bblue└─($smoothblue\$(date \"+%H:%M\") $coldblue$(parse_git_branch) \$$bblue)─>$white "
 
 # Determine what prompt to display:
 # 1.  Display simple custom prompt for shell sessions started

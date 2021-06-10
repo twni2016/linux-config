@@ -19,6 +19,8 @@ Host example.net
   RemoteCommand cd <new directory> && exec bash --login
   RequestTTY yes
 ```
+- I can [manually init conda](https://askubuntu.com/a/1080052) by adding `. <miniconda3 path>/etc/profile.d/conda.sh` to `.bashrc`, then run `conda activate` to enter env `base`
+
 
 ## Reference
 https://github.com/rkirti/bashrc

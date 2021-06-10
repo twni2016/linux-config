@@ -13,7 +13,7 @@ rm -rf linux-config/ # remove this repo
 ```
 
 ## Setup Commands
-- If I want to change the default login directory ($HOME), edit the ssh config file:
+- If I want to change the default [login directory](https://serverfault.com/a/167439) ($HOME), edit the ssh config file:
 ```
 Host example.net
   RemoteCommand cd <new directory> && exec bash --login

@@ -21,6 +21,8 @@ Host example.net
 ```
 - I can [manually init conda](https://askubuntu.com/a/1080052) by adding `. <miniconda3 path>/etc/profile.d/conda.sh` to `.bashrc`, then run `conda activate` to enter env `base`
 
+## Troubleshooting
+- For `tmux` verison 3.0+, it does not support `\`, so we have to replace `\` with `\\` in `bind \\ splitw -h`
 
 ## Reference
 https://github.com/rkirti/bashrc

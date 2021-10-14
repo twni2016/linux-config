@@ -24,6 +24,7 @@ Host example.net
 ## Troubleshooting
 - For `tmux` verison 3.0+, it does not support `\`, so we have to replace `\` with `\\` in `bind \\ splitw -h`
 - Since Aug 2021, github no longer supports using password to push the code, instead using personal access token (PAT). We can save PAT in `~/.git-credentials` in the format of `https://<username>:<PAT>@github.com` to avoid repeatedly asking for PAT.
+  - Don't forget to command `git config --global credential.helper store` to avoid manual typing.  
 
 ## Reference
 https://github.com/rkirti/bashrc

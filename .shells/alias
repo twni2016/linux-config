@@ -25,11 +25,11 @@ alias mv='mv -i'
 # Git Commands
 # Add and Commit are used as functions
 alias gc='git commit -m'
-alias gpo='git push origin master'
+alias gpo='git push origin main'
 alias gp='git pull'
 alias gs='git status'
 alias gd='git diff'
-alias grh='git reset --hard origin/master'
+alias grh='git reset --hard origin/main'
 
 # Quickly load bashrc
 alias bashrc='source ~/.bashrc'

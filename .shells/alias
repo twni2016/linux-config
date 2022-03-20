@@ -51,5 +51,5 @@ alias htopme='htop -u "$USER"'
 # slurm
 alias sq='squeue -u "$USER" --sort=+i --format="%.8i %.6P %.14j %.3t %16S %.10M %.10L %.5D %.4C %.15b %.7m %.8N %.8r"'
 alias sact='sacct -X --format JobID,JobName,Partition,State,Start,End,Elapsed,Timelimit,AllocTRES%45,NodeList -S $(date -d "3 days ago"  +"%Y-%m-%dT%H:%M:%S")'
-
+alias quota='beegfs-ctl --cfgFile=/etc/beegfs/home.d/beegfs-client.conf --getquota --uid $USER'
 

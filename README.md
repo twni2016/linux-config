@@ -22,7 +22,6 @@ Host example.net
 - I can [manually init conda](https://askubuntu.com/a/1080052) by adding `. <miniconda3 path>/etc/profile.d/conda.sh` to `.bashrc`, then run `conda activate` to enter env `base`
 
 ## Troubleshooting
-- For `tmux` verison 3.0+, it does not support `\`, so we have to replace `\` with `\\` in `bind \\ splitw -h`
 - Since Aug 2021, github no longer supports using password to push the code, instead using personal access token (PAT). We can save PAT in `~/.git-credentials` in the format of `https://<username>:<PAT>@github.com` to avoid repeatedly asking for PAT.
   - Don't forget to command `git config --global credential.helper store` to avoid manual typing.  
 

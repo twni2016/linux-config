@@ -20,6 +20,7 @@ Host example.net
   RequestTTY yes
 ```
 - I can [manually init conda](https://askubuntu.com/a/1080052) by adding `. <miniconda3 path>/etc/profile.d/conda.sh` to `.bashrc`, then run `conda activate` to enter env `base`
+- Installing python environments: see https://gist.github.com/twni2016/5b18a97c66686cbddbff84e4bdc1b984 
 
 ## Troubleshooting
 - Since Aug 2021, github no longer supports using password to push the code, instead using personal access token (PAT). We can save PAT in `~/.git-credentials` in the format of `https://<username>:<PAT>@github.com` to avoid repeatedly asking for PAT.

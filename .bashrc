@@ -24,7 +24,9 @@ source ~/.shells/prompt   # Fancy prompt with time and current working dir
 # Welcome message
 echo -ne "Welcome, $NICKNAME! It's "; date '+%A, %B %-d %Y'
 
-# >>> conda initialize >>>
 
 # default conda env
 # conda activate dyn
+
+# default virtualenv
+# source ~/pomdp/bin/activate

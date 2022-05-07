@@ -3,10 +3,8 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=ignoreboth
 export HISTIGNORE='&:clear:ls:cd:[bf]g:exit:[ t\]*'
 
-# Mujoco
+# openai mujoco_py
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin
-export MJLIB_PATH=$HOME/.mujoco/mujoco-2.1.1/lib/libmujoco.so.2.1.1
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 
 # headless for dm_control
 export MUJOCO_GL=egl

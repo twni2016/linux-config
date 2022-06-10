@@ -28,3 +28,5 @@ Host example.net
 
 ## Reference
 https://github.com/rkirti/bashrc
+
+A similar theme in [oh my zsh](https://github.com/ohmyzsh/ohmyzsh) is [`jonathan`](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#jonathan)

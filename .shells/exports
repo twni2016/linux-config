@@ -5,6 +5,8 @@ export HISTIGNORE='&:clear:ls:cd:[bf]g:exit:[ t\]*'
 
 # openai mujoco_py
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin
+# CC
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 
 # headless for dm_control
 export MUJOCO_GL=egl

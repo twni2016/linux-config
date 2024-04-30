@@ -51,8 +51,8 @@ PS1="$bblue┌─($red\u$white@$green\h $yellow\$(date \"+%a, %d %b %y\")$bblue)
 
 function load_prompt () {
     # Get PIDs
-    local parent_process=$(cat /proc/$PPID/cmdline | cut -d \. -f 1)
-    local my_process=$(cat /proc/$$/cmdline | cut -d \. -f 1)
+    local parent_process=$(tr '\0' ' ' < /proc/$PPID/cmdline | cut -d ' ' -f 1)
+    local my_process=$(tr '\0' ' ' < /proc/$$/cmdline | cut -d ' ' -f 1)
 
     if  [[ $parent_process == script* ]]; then
         PROMPT_COMMAND=""

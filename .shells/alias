@@ -18,7 +18,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Some more, to avoid mistakes
-alias rm='rm -i'
+rm() {
+    if [[ "$*" == "-rf ~" || "$*" == "-rf $HOME" ]]; then
+        echo "Error: Attempt to delete home directory is not allowed."
+    else
+        command rm -i "$@"
+    fi
+}
 alias cp='cp -i'
 alias mv='mv -i'
 
@@ -52,5 +58,3 @@ alias htopme='htop -u "$USER"'
 alias salloc='salloc --mail-user tianwei.ni@mila.quebec --mail-type BEGIN,END,TIME_LIMIT_80'
 alias sq='squeue -u "$USER" --sort=+i --format="%.8i %.6P %.4j %.3t %.19V %.16S %.10M %.10L %.5D %.4C %.15b %.7m %.8N %.8r"'
 alias sact='sacct -X --format JobID,JobName,Partition,State,Submit,Start,End,Elapsed,Timelimit,AllocTRES%45,NodeList -S $(date -d "7 days ago"  +"%Y-%m-%dT%H:%M:%S")'
-alias quota='beegfs-ctl --cfgFile=/etc/beegfs/home.d/beegfs-client.conf --getquota --uid $USER'
-

@@ -26,10 +26,7 @@ echo -ne "Welcome, $NICKNAME! It's "; date '+%A, %B %-d %Y'
 
 
 # default conda env
-# module load miniconda
-# module load singularity # v3.7
-# conda activate dyn
+module load anaconda/3
+module load cudatoolkit/12.2.2
 
-# default virtualenv
-# module load python/3.7
-# source ~/rl/bin/activate
+conda activate rl2024

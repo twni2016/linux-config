@@ -2,7 +2,13 @@
 
 Everytime I create my account in a new machine...
 
-Support aliases as my daily coding tools for Linux commands, git, conda, tmux, nvidia-smi, slurm, tensorboard, jupyter, etc. 
+Support aliases as my daily coding tools for Linux commands, git, conda, tmux, nvidia-smi, slurm, wandb, etc. 
+
+## Checklist
+- [ ] `.shells/alias`
+- [ ] `.shells/functions`
+- [ ] `.gitconfig`, `.git-credentials`
+- [ ] `.tmux.conf`
 
 ## Usage
 ```bash

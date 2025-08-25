@@ -57,3 +57,20 @@ function parse_git_dirty {
 function parse_git_branch {
 git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
+
+wandb-sync () {
+    local PAR=1           # default parallelism
+    local DIRS=()
+
+    # parse only one flag: -p <N>
+    while [[ $# -gt 0 ]]; do
+        if [[ $1 == -p ]]; then PAR=$2; shift 2
+        else DIRS+=("$1"); shift
+        fi
+    done
+
+    [[ ${#DIRS[@]} -eq 0 ]] && { echo "usage: wandb-sync <glob>… [-p N]"; return 1; }
+
+    find "${DIRS[@]}" -maxdepth 0 -type d -print0 \
+      | xargs -0 -n1 -P "$PAR" wandb sync
+}
